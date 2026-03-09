@@ -97,6 +97,12 @@ The Nautilus DevOps team needs to set up an application on an EC2 instance to in
 
   ```bash
   ssh root@<ec2-public-ipv4>
+
+  # Create a test file
+  echo "S3 test access" >> test.txt
+
+  aws s3 cp test.txt s3://devops-s3-6653/
+  aws s3 ls s3://devops-s3-6653/
   ```
 
   <img src="./assets_37/test.png" alt="verification" />
